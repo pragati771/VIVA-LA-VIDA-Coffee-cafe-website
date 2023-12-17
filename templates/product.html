@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIVA LA VIDA MENU</title>
+    <link rel="stylesheet" href="/static/css/product.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>VIVA LA VIDA MENU</h1>
+        <div class="menu-item">
+            <img src="/static/img/espresoo.jpg" alt="Espresso">
+            <h2>Espresso <span class="icon">&#xf0fc;</span></h2>
+            <p>Strong black coffee brewed by forcing hot water through finely-ground coffee beans.</p>
+            <p class="price">$2.50</p>
+        </div>
+        <div class="menu-item">
+            <img src="/static/img/capichino.jpg" alt="Cappuccino">
+            <h2>Cappuccino <span class="icon">&#xf0f9;</span></h2>
+            <p>Espresso mixed with steamed milk and topped with a layer of frothed milk.</p>
+            <p class="price">$3.50</p>
+        </div>
+        <div class="menu-item">
+            <img src="/static/img/latee.jpg" alt="Latte">
+            <h2>Latte <span class="icon">&#xf0f4;</span></h2>
+            <p>Espresso mixed with a larger amount of steamed milk and a small amount of frothed milk.</p>
+            <p class="price">$4.00</p>
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+</body>
+</html>
+
+
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3>Product Details</h3>
+      <p>We brings you fresh products from our own organic farm</p>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script>
+    function viewDetails(productId) {
+      // You can fetch details of the product using Ajax or set static data
+      const modalImage = document.getElementById('modalImage');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalDescription = document.getElementById('modalDescription');
+
+      // Set data for the modal based on the productId
+      // Replace the following lines with your actual data
+      modalImage.src = `path/to/product${productId}.jpg`;
+      modalTitle.textContent = `Product ${productId}`;
+      modalDescription.textContent = `Detailed description of Product ${productId}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`;
+
+      // Show the modal
+      document.getElementById('productModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      // Close the modal
+      document.getElementById('productModal').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>

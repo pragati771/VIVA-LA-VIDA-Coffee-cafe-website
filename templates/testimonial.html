@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('https://images.pexels.com/photos/4549414/pexels-photo-4549414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat; /* Replace with your background image URL */
+    }
+
+    .swiper-container {
+      width: 80%;
+      height: 60%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.8); /* White box with slight transparency */
+      border-radius: 10px;
+      padding: 10px; /* Smaller padding */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    }
+
+    .testimonial-image {
+      width: 60px; /* Adjust the image size as needed */
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-circle {
+      width: 30px;
+      height: 30px;
+      background-color: #000; /* Black circle */
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .testimonial-text {
+      font-size: 12px; /* Smaller font size */
+      margin-bottom: 5px; /* Smaller margin */
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      font-size: 10px; /* Smaller font size */
+    }
+  </style>
+</head>
+<body>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="https://placekitten.com/60/60" alt="Testimonial Image" class="testimonial-image">
+      <div class="testimonial-circle">5*</div>
+      <p class="testimonial-text">"This place is amazing! They offered the best coffee and showed the best attitude to its costumers."</p>
+      <p class="testimonial-author">John Doe</p>
+    </div>
+    <div class="swiper-slide">
+      <img src="https://placekitten.com/61/61" alt="Testimonial Image" class="testimonial-image">
+      <div class="testimonial-circle">5*</div>
+      <p class="testimonial-text">" This coffee shop is my favorite place to hang and do my works. I really like this place because it has a good ambiance and not too crowded as well"</p>
+      <p class="testimonial-author">Jane Smith</p>
+    </div>
+    <div class="swiper-slide">
+      <img src="https://placekitten.com/62/62" alt="Testimonial Image" class="testimonial-image">
+      <div class="testimonial-circle">4*</div>
+      <p class="testimonial-text">"Unquestionably, the best coffee shop in the area! "</p>
+      <p class="testimonial-author">Robert Johnson</p>
+    </div>
+    <div class="swiper-slide">
+      <img src="https://placekitten.com/63/63" alt="Testimonial Image" class="testimonial-image">
+      <div class="testimonial-circle">5*</div>
+      <p class="testimonial-text">"The service and workers are so friendly and kind.I am a satisfied costumer!"</p>
+      <p class="testimonial-author">Emily Davis</p>
+    </div>
+    <div class="swiper-slide">
+      <img src="https://placekitten.com/64/64" alt="Testimonial Image" class="testimonial-image">
+      <div class="testimonial-circle">4*</div>
+      <p class="testimonial-text">"The efficiency and effectiveness of your product are unmatched."</p>
+      <p class="testimonial-author">Michael Brown</p>
+    </div>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>
+
+</body>
+</html>
